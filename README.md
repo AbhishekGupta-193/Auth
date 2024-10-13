@@ -1,6 +1,6 @@
-## API Endpoints
+# API Endpoints
 
-# Register User
+## Register User
 
 POST : http://localhost:8080/auth/registerUser
 BODY : 
@@ -10,7 +10,7 @@ BODY :
     }
 
 
-# Login User
+## Login User
 
 POST : http://localhost:8080/auth/loginUser
 BODY :
@@ -19,7 +19,7 @@ BODY :
 }
 
 
-#Get All User Details
+## Get All User Details
 
 GET : http://localhost:8080/auth/getUsers
 
