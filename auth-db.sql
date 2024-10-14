@@ -14,3 +14,12 @@ INSERT into users (mobile_no,name) values
 
 select * from users;
 
+ALTER TABLE users ADD COLUMN password VARCHAR(255);
+
+UPDATE users set password='abcd' where id=1;
+UPDATE users set password='bcde' where id=2;
+UPDATE users set password='defg' where id=3;
+UPDATE users set password='ghij' where id=4;
+UPDATE users set password='hijk' where id=5;
+UPDATE users set password='ijkl' where id=6;
+UPDATE users set password='1234' where id=17;

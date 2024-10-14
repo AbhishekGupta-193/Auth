@@ -34,10 +34,10 @@ public class authService {
         return new ResponseEntity<>("Internal Server Error",HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
-    public ResponseEntity<user> loginUser(String mobileNo) {
+    public ResponseEntity<user> loginUser(String mobileNo, String password) {
         try{
             user user = authDao.findByMobileNo(mobileNo);
-            if(user!=null){
+            if(user!=null && user.getPassword().equals(password)){
                 return new ResponseEntity<>(user,HttpStatus.OK);
             }else{
                 return new ResponseEntity<>(null,HttpStatus.NOT_FOUND);
