@@ -25,14 +25,15 @@ public class authService {
     }
 
     public ResponseEntity<String> registerUser(user user) {
-        try{
+        try {
             authDao.save(user);
-            return new ResponseEntity<>("success",HttpStatus.CREATED);
-        }catch(Exception e){
+            return new ResponseEntity<>("{\"message\": \"success\"}", HttpStatus.CREATED);
+        } catch (Exception e) {
             e.printStackTrace();
         }
-        return new ResponseEntity<>("Internal Server Error",HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity<>("{\"message\": \"Internal Server Error\"}", HttpStatus.INTERNAL_SERVER_ERROR);
     }
+
 
     public ResponseEntity<user> loginUser(String mobileNo, String password) {
         try{
